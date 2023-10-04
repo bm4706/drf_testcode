@@ -55,7 +55,7 @@ class LoginUserTest(APITestCase):
             path=reverse("user_view"),
             HTTP_AUTHORIZATION=f"Bearer {access_token}"
         )
-        self.assertEqual[response.status_code, 200] # 되는지 여부 확인 아래거쓸라면 주석처리해야함
-        # self.assertEqual(response.data['username'], self.data['username'])
+        # self.assertEqual(response.status_code, 200) # 되는지 여부 확인 아래거쓸라면 주석처리해야함
+        self.assertEqual(response.data['username'], self.data['username'])
            
         
